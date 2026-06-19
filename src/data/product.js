@@ -34,7 +34,7 @@ export const products = [
     slug: "spherecart",
     tag: "MOBILE AND WEB BASED",
     img: loopscartImg,
-    title: "SphereCart: E-commerce",
+    title: "LoopsCart: E-commerce",
     desc: "A full-featured e-commerce engine with product catalog, checkout, payments, order management, and analytics for online stores.",
     bullets: [
       "Allows customers to shop anytime, increasing sales opportunities.",
