@@ -13,12 +13,12 @@ import ClientsCarousel from "../components/ClientsCarousel.jsx";
 import Contact from "./Contact.jsx";
 
 const clients = [
-  { name: "Rewardiz", logo: "../../public/Rewardiz.jpg" },
-  { name: "Foodieho", logo: "../../public/foodieho.png" },
-  { name: "Loopscart", logo: "../../public/loopscart.png" },
-  { name: "Rewardiz", logo: "../../public/Rewardiz.jpg" },
-  { name: "Foodieho", logo: "../../public/foodieho.png" },
-  { name: "Loopscart", logo: "../../public/loopscart.png" },
+  { name: "Rewardiz", logo: "/Rewardiz.jpg" },
+  { name: "Foodieho", logo: "/foodieho.png" },
+  { name: "Loopscart", logo: "/loopscart.png" },
+  { name: "Rewardiz", logo: "/Rewardiz.jpg" },
+  { name: "Foodieho", logo: "/foodieho.png" },
+  { name: "Loopscart", logo: "/loopscart.png" },
 ];
 
 export default function Home() {
