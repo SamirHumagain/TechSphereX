@@ -1,0 +1,123 @@
+// === TECHSPHEREX DESIGN TOKENS ===
+// Colors extracted from logo: dark navy bg, cyan-to-blue gradient sphere
+
+$primary: #00B4D8;        // cyan - main accent
+$primary-dark: #0077B6;   // deep blue
+$primary-light: #48CAE4;  // light cyan
+$primary-glow: #90E0EF;   // pale cyan highlight
+$dark-bg: #0A0F1E;        // near-black navy (logo bg)
+$dark-surface: #0D1526;   // slightly lighter navy
+$dark-card: #111B2E;      // card background
+$dark-border: #1A2840;    // border color
+$text-primary: #E8F4FD;   // near-white with blue tint
+$text-secondary: #8BAFC8; // muted blue-grey
+$text-muted: #4A6580;     // dim text
+$white: #ffffff;
+$light-bg: #F0F6FF;       // very light blue-tinted bg for light sections
+
+// Typography
+$font-heading: 'Poppins', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Spacing
+$container-max: 1100px;
+$nav-height: 70px;
+
+// Gradient
+$gradient-primary: linear-gradient(135deg, $primary-dark 0%, $primary 50%, $primary-light 100%);
+$gradient-dark: linear-gradient(135deg, $dark-bg 0%, $dark-surface 100%);
+$gradient-hero: linear-gradient(135deg, #051020 0%, #0A1A35 60%, #0D2040 100%);
+
+// Shadows
+$shadow-glow: 0 0 30px rgba(0, 180, 216, 0.25);
+$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+
+// Mixins
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-padding {
+  padding: 80px 0;
+}
+
+@mixin card-base {
+  background: $dark-card;
+  border: 1px solid $dark-border;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  &:hover {
+    border-color: rgba($primary, 0.4);
+    box-shadow: $shadow-glow;
+    transform: translateY(-2px);
+  }
+}
+
+@mixin btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: $gradient-primary;
+  color: $white;
+  font-family: $font-body;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0 4px 20px rgba($primary, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+@mixin btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  background: transparent;
+  color: $primary;
+  font-family: $font-body;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    background: rgba($primary, 0.1);
+    box-shadow: 0 4px 20px rgba($primary, 0.2);
+    transform: translateY(-1px);
+  }
+}
+
+@mixin section-label {
+  font-family: $font-body;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $primary;
+  margin-bottom: 12px;
+}
+
+// Responsive
+@mixin mobile {
+  @media (max-width: 768px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}

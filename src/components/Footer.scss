@@ -1,0 +1,143 @@
+@use "../styles/variables" as *;
+
+.footer {
+  background: $dark-surface;
+  border-top: 1px solid $dark-border;
+  margin-top: 80px;
+  padding: 10px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    gap: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__brand {
+    p {
+      color: $text-secondary;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 12px 0 16px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    span {
+      font-family: $font-heading;
+      font-size: 16px;
+      font-weight: 700;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    span {
+      font-size: 13px;
+      color: $text-secondary;
+    }
+  }
+
+  &__links-col {
+    h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: 16px;
+      letter-spacing: 0.3px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li a {
+        font-size: 13px;
+        color: $text-secondary;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $primary-light;
+        }
+      }
+    }
+  }
+
+  &__social-col {
+    h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: $text-primary;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+
+    a {
+      width: 38px;
+      height: 38px;
+      background: $dark-card;
+      border: 1px solid $dark-border;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $text-secondary;
+      transition: all 0.2s;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      &:hover {
+        background: rgba($primary, 0.15);
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $dark-border;
+    text-align: center;
+    padding: 20px 24px;
+
+    p {
+      font-size: 13px;
+      color: $text-muted;
+    }
+  }
+}

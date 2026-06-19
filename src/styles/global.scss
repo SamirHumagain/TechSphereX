@@ -1,0 +1,122 @@
+@use 'variables' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  background: $dark-bg;
+  color: $text-primary;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: $font-body;
+}
+
+// Page icon badge (like the arrow-down-left icon in screenshots)
+.page-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: $primary;
+  border-radius: 50%;
+  margin-right: 16px;
+  flex-shrink: 0;
+
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: $white;
+  }
+}
+
+.page-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.page-hero {
+  text-align: center;
+  padding: 100px 24px 60px;
+  background: linear-gradient(180deg, rgba($primary-dark, 0.08) 0%, transparent 100%);
+
+  h1 {
+    font-family: $font-heading;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: $primary;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    color: $primary;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+}
+
+.section-label {
+  @include section-label;
+  text-align: center;
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 700;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container {
+  @include container;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: $dark-surface;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-dark;
+  border-radius: 3px;
+}

@@ -1,0 +1,134 @@
+@use '../styles/variables' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $nav-height;
+  background: rgba($dark-bg, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $dark-border;
+
+  &__inner {
+    @include container;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    span {
+      font-family: $font-heading;
+      font-size: 18px;
+      font-weight: 700;
+      background: $gradient-primary;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    li a {
+      display: block;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: $text-secondary;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $primary-light;
+        background: rgba($primary, 0.08);
+      }
+
+      &.active {
+        color: $primary;
+      }
+    }
+
+    // CONTACT gets special highlight
+    li:last-child a {
+      color: $primary;
+      border: 1px solid rgba($primary, 0.4);
+
+      &:hover, &.active {
+        background: rgba($primary, 0.15);
+        border-color: $primary;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $primary;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+  }
+
+  @include mobile {
+    &__hamburger {
+      display: flex;
+    }
+
+    &__links {
+      display: none;
+      position: absolute;
+      top: $nav-height;
+      left: 0;
+      right: 0;
+      background: $dark-surface;
+      border-bottom: 1px solid $dark-border;
+      flex-direction: column;
+      padding: 16px;
+      gap: 4px;
+
+      &--open {
+        display: flex;
+      }
+
+      li a {
+        display: block;
+        width: 100%;
+      }
+
+      li:last-child a {
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+  }
+}
