@@ -23,10 +23,10 @@ export default function Footer() {
               Location: Lalitpur-2, Nepal
             </span>
             <span>
-              <FaEnvelope /> info@techspherex.com
+              <FaEnvelope /> info@techspherex.online 
             </span>
             <span>
-              <FaPhoneAlt /> +977-982-3821451
+              <FaPhoneAlt /> +977-9704271752
             </span>
           </div>
         </div>

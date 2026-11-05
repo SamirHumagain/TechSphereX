@@ -124,14 +124,14 @@ export default function Home() {
                 <span className="contact-icon">✉️</span>
                 <div>
                   <h4>Drop a Line</h4>
-                  <p>info@techspherex.com</p>
+                  <p>info@techspherex.online </p>
                 </div>
               </div>
               <div className="home__contact-card">
                 <span className="contact-icon">📞</span>
                 <div>
                   <h4>Give us a Call</h4>
-                  <p>+977-982-3821451</p>
+                  <p>+977-9704271752</p>
                 </div>
               </div>
               <div className="home__contact-card">
