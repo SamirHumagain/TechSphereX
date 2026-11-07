@@ -10,6 +10,7 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import "./styles/global.scss";
 import ScrollToTop from "./components/ScrollToTop";
+import Iot from "./pages/iot/Iot";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/products/:slug" element={<ProductDetail />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/iot" element={<Iot />} />
         </Routes>
       </main>
       <Footer />

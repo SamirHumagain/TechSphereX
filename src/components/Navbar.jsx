@@ -24,6 +24,7 @@ export default function Navbar() {
             { to: '/services', label: 'SERVICES' },
             { to: '/products', label: 'PRODUCTS' },
             { to: '/careers', label: 'CAREERS' },
+            { to: '/iot', label: 'IOT' },
             { to: '/contact', label: 'CONTACT' },
           ].map(({ to, label }) => (
             <li key={to}>
